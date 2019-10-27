@@ -4,21 +4,23 @@ html {
 }
 body {
   font-family: "Open Sans", Tahoma, Geneva, sans-serif;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: auto;
+  padding-right: auto;
   left: 0;
   right: 0;
   margin: auto;
-  /* width: 60%; */
   text-align: center;
   background-color: #141414;
   color: rgb(197, 191, 158);
+  /* width: 80%; */
+  min-width: 950px;
   height: 100%; /* force the BODY element to match the height of the HTML element */
 }
 
 article {
   background-color: #312e2e7c;
   width: 65%;
+  min-width: 850;
   padding: 10px 25px;
   margin: 5px;
   border-radius: 15px;
@@ -51,11 +53,12 @@ a :hover {
 
 button {
   height: 60px;
-  width: 210px;
+  width: 180px;
   font-size: medium;
 }
 
 img {
+  min-width: 700;
   padding: 10px 25px;
   width: 70%;
 }
