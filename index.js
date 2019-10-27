@@ -17,7 +17,7 @@ const app = express();
 const graphqlHTTP = require("express-graphql");
 const { buildSchema } = require("graphql");
 //get schema and resolvers
-const schema = require("./controllers/schema");
+const schema = require("./models/schema");
 const graphqlSchema = buildSchema(schema);
 const resolvers = require("./models/resolvers")(knex);
 
