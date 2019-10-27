@@ -3,19 +3,69 @@ html {
   position: relative;
 }
 body {
+  font-family: "Open Sans", Tahoma, Geneva, sans-serif;
+  padding-left: 50px;
+  padding-right: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* width: 60%; */
+  text-align: center;
   background-color: #141414;
-  color: aliceblue;
+  color: rgb(197, 191, 158);
   height: 100%; /* force the BODY element to match the height of the HTML element */
 }
 
+article {
+  background-color: #312e2e7c;
+  width: 65%;
+  padding: 10px 25px;
+  margin: 5px;
+  border-radius: 15px;
+  display: inline-block;
+  text-align: justify;
+}
+
+h1 {
+  line-height: 50px;
+  padding: 0;
+}
+
+h3 {
+  font-size: x-large;
+}
+
+p {
+  color: silver;
+  font-size: larger;
+  text-indent: 25px;
+}
+
+a {
+  color: inherit;
+}
+a :hover {
+  color: silver;
+}
+
+img {
+  padding: 10px 25px;
+  width: 70%;
+}
+
+#logo {
+  vertical-align: middle;
+  width: 50px;
+}
 #status {
   min-height: 30px;
   min-width: 150px;
-  background-color: rgb(97, 200, 231);
+  background-color: rgb(2, 47, 61);
 }
 
 #infoPanel {
   min-height: 30px;
   min-width: 150px;
-  background-color: greenyellow;
+  color: aliceblue;
+  /* background-color: greenyellow; */
 }

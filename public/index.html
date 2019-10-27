@@ -16,18 +16,105 @@
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
   </head>
 
-  <body ng-app="myApp">
+  <body>
     <!--
       Will add a status panel in the future
       <div id="status"></div>
     -->
-    <div id="infoPanel"></div>
+    <h1>
+      <img
+        id="logo"
+        src="./assets/eso_icon.ico"
+        alt="Elder Scrolls Online logo."
+      />
+      ESO Log Parser
+    </h1>
+    <img
+      src="./assets/elder-scrolls-online-elsweyr.jpg"
+      alt="A picture of a dragon flying over a barren land. One person stands on a cliff facing him. Elder Scrolls Online logo."
+    />
 
-    helooooo
-    <button id="getLogs">Get All Logs</button>
-    <button id="getChars">Get All Chars</button>
-    <button id="addLog">Delete Log</button>
-    <button id="deleteLog">Delete Log</button>
+    <article>
+      <p>
+        This API is primarily used to look through the logs of a popular MMORPG
+        called Elder Scrolls Online.
+      </p>
+      <p>
+        While very much a work in progress, the idea is to be able to lookup
+        direct info, from the log files. Due to the vast amount of data loading
+        and parsing could take some time, so please be patient.
+      </p>
+      <p>
+        At this moment the api can handle only 1 log file at a time (for 1
+        event). As such, all the data is considered
+        <strong><em>to 1 event log.</em></strong>
+      </p>
+    </article>
+
+    <article>
+      <h3>Used tech:</h3>
+      <ul>
+        <li>
+          <p>
+            DBMS used is <a href="https://www.postgresql.org/">Postgres</a>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Queries are handled by <a href="https://graphql.org/">GraphQL</a>.
+          </p>
+        </li>
+        <li>
+          <p>Server: <a href="https://expressjs.com/">express-js</a>.</p>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>
+        The repository can be found at this
+        <a href="https://github.com/FuyuByakko/ESO-Logs-parser" target="_blank"
+          >Github Link</a
+        >
+      </h3>
+      <p>
+        During testing, direct access to most of the data is allowed. This means
+        that it is possible to add/remove/edit data directly using queries.
+      </p>
+      <p>
+        In the future, it is planned that data etry will be allowed only via
+        actual ESO log uploads.
+      </p>
+    </article>
+
+    <article>
+      <h3>Using the API</h3>
+      <h4>GraphQL playspace</h4>
+      <p>
+        You can use <a href="/graphql" target="_blank">this link</a> to enter
+        the GraphQL test space to test the queries
+      </p>
+      <p>
+        An extensive description of how to setup the repo, and also the type of
+        queries, requirements can be found in the
+        <a href="https://github.com/FuyuByakko/ESO-Logs-parser" target="_blank"
+          >README</a
+        >.
+      </p>
+      <h4>Console calls</h4>
+      <div>
+        <p>Also plan do add an interactive test field below</p>
+        <p>
+          Currently the below buttons will only print out the result in the
+          console.
+        </p>
+        <button id="getLogs">Get All Logs</button>
+        <button id="getChars">Get All Chars</button>
+        <button id="addLog">Delete Log</button>
+        <button id="deleteLog">Delete Log</button>
+        <div id="infoPanel"></div>
+      </div>
+    </article>
     <!-- Controllers -->
     <script src="/js/controller.js"></script>
     <!-- draw the changes to the file -->
