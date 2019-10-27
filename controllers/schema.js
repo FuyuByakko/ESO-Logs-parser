@@ -30,12 +30,41 @@ const mutations = `
     log_nr: String!
     server: String!
   }
-  input inputCharacters {
-    characterName: String!
-    characterId: String!
+  input editLogs {
+    log_nr: String
+    server: String
+  }
+  input inputCharacter {
+    id: Int
+    player_nr: Int
+    type: String!
+    character_name: String!
+    character_id: String!
+    player_identifier: String!
+    level: Int
+    cp_rank: Int
+    added_to_group: Boolean
+    time_from_log_Start: String
+  }
+  input editCharacter {
+    id: Int
+    player_nr: Int
+    type: String
+    character_name: String
+    character_id: String
+    player_identifier: String
+    level: Int
+    cp_rank: Int
+    added_to_group: Boolean
+    time_from_log_Start: String
   }
   type Mutation {
     AddLog(info: inputLogs): Log
+    EditLog(log_nr: String!, info: editLogs): Log
+    RemoveLog(log_nr: String!): Log
+    AddCharacter(info: inputCharacter): Character
+    EditCharacter(character_name: String character_id: String info: editCharacter): Character
+    RemoveCharacter(character_name: String character_id: String): Character
   },`;
 
 const schemaString = queries.concat(mutations);

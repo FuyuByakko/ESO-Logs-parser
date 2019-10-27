@@ -2,6 +2,7 @@
 node_modules
 /dist
 /src_file/*
+/models/future_migrations_to_add
 
 /test/e2e/reports/
 selenium-debug.log

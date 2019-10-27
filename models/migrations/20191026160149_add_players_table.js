@@ -10,9 +10,7 @@ exports.up = function(knex, Promise) {
   // create the 'logs' table with three columns
   return knex.schema.createTable("players", (t) => {
     t.increments().index();
-    t.integer("player_nr", 30)
-      .notNullable()
-      .index();
+    t.integer("player_nr", 30).index();
     t.string("type", 15).notNullable();
     t.string("character_name", 30)
       .notNullable()
@@ -25,8 +23,8 @@ exports.up = function(knex, Promise) {
       .index();
     t.integer("level").notNullable();
     t.integer("cp_rank").notNullable();
-    t.boolean("added").notNullable();
-    t.string("action_at", 30).notNullable(); // default to the current time
+    t.boolean("added");
+    t.string("action_at", 30);
   });
 };
 
