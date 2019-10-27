@@ -3,7 +3,7 @@ const queries = `
     id: Int
     server: String
     log_nr: String!
-    date_added: String
+    created_at: String
   }
   type Character {
     id: Int
