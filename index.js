@@ -39,7 +39,7 @@ app.use(express.static(`./public`)); // otherwise load the client app
 
 // 5. Catch unhandled errors
 // eslint-disable-next-line no-unused-vars
-app.use((err, req, res, next) => {
+app.use((_err, _req, res, _next) => {
   return res.status(500).send("Internal Error.");
 });
 
