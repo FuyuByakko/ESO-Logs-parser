@@ -21,14 +21,17 @@ module.exports = (knex) => {
         .where(`type`, `=`, `${req.type}`)
         .select(),
     Character: (req) => {
-      if (req.character_id)
-        return knex("players")
-          .where(`character_id`, `like`, `${req.character_id}`)
-          .select();
-      if (req.character_name)
-        return knex("players")
-          .where(`character_name`, `like`, `${req.character_name}`)
-          .select();
+      let param;
+      if (req.character_id) {
+        param = "character_id";
+      } else if (req.character_name) {
+        param = "character_name";
+      }
+      const searchParam = req[param];
+      return knex("players")
+        .where(`${param}`, `like`, `%${searchParam}%`)
+        .select()
+        .then((char) => char.pop());
     },
 
     /*
