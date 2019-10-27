@@ -3,6 +3,8 @@ html {
   position: relative;
 }
 body {
+  background-color: #141414;
+  color: aliceblue;
   height: 100%; /* force the BODY element to match the height of the HTML element */
 }
 

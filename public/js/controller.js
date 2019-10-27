@@ -1,9 +1,32 @@
-// const { parseFile } = require('../../utils');
-document.getElementById("parseFile").addEventListener("click", () => {
-  console.log("clicked");
-  // fetch("./api", {
-  //   method: 'POST',
-  //   headers: {'Content-Type': 'application/json'},
-  //   body: JSON.stringify({"message": "hello"}),
-  // })
+document.getElementById("getLogs").addEventListener("click", () => {
+  console.log("clicked getLogs");
+  fetch("./graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/graphql" },
+    body: "{Logs {log_nr}}",
+  }).then((res) => console.log(res.json()));
+});
+document.getElementById("getChars").addEventListener("click", () => {
+  console.log("clicked getChars");
+  fetch("./graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/graphql" },
+    body: "{Logs {log_nr}}",
+  }).then((res) => console.log(res.json()));
+});
+document.getElementById("addLog").addEventListener("click", () => {
+  console.log("clicked addLog");
+  fetch("./graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/graphql" },
+    body: "{Logs {log_nr}}",
+  }).then((res) => console.log(res.json()));
+});
+document.getElementById("deleteLog").addEventListener("click", () => {
+  console.log("clicked deleteLog");
+  fetch("./graphql", {
+    method: "POST",
+    headers: { "Content-Type": "application/graphql" },
+    body: "{Logs {log_nr}}",
+  }).then((res) => console.log(res.json()));
 });

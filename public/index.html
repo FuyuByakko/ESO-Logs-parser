@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <!-- name that appears on the tab at the top of the browser tab -->
-    <title>Clack</title>
+    <title>ESO Log Parser</title>
     <!-- style sheet for project -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- font awesome -->
@@ -17,14 +17,19 @@
   </head>
 
   <body ng-app="myApp">
-    <div id="status"></div>
+    <!--
+      Will add a status panel in the future
+      <div id="status"></div>
+    -->
     <div id="infoPanel"></div>
 
     helooooo
-    <button id="parseFile">Lets parse!</button>
+    <button id="getLogs">Get All Logs</button>
+    <button id="getChars">Get All Chars</button>
+    <button id="addLog">Delete Log</button>
+    <button id="deleteLog">Delete Log</button>
     <!-- Controllers -->
-    <script src="js/controller.js"></script>
-
+    <script src="/js/controller.js"></script>
     <!-- draw the changes to the file -->
     <script src="js/view.js"></script>
   </body>

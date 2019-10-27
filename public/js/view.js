@@ -1,4 +1,6 @@
-// const app = angular.module("myApp", []);
+/*
+Setup for status updates
+
 const curState = {};
 
 const statusChange = (change) => {
@@ -17,5 +19,9 @@ const updateStatus = (change) => {
 };
 
 updateStatus({ type: "CHANGE_STATUS" });
+*/
 
-// module.exports = { updateStatus };
+const showData = (res) => {
+  const infoPanel = document.getElementById("infoPanel");
+  infoPanel.innerText = res.data;
+};
