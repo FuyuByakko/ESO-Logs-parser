@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 const config = require("./../config");
 const knex = require("knex")(config.db);
 
@@ -19,7 +20,7 @@ function parseFile(err, data) {
     switch (entry[1]) {
       case "BEGIN_LOG":
         let [_time, _command, log_nr, _, server, _language, _version] = entry;
-        const logsObj = { log_nr, server };
+        const logsObj = { log_nr, server: server.slice(1, -1) };
         allData.logs.push(logsObj);
         break;
       case "UNIT_ADDED":
@@ -35,18 +36,19 @@ function parseFile(err, data) {
           _2,
           _3,
           _4,
-          character_name,
-          character_id,
+          char_name,
+          char_id,
           player_identifier,
           level,
           cp_rank,
         ] = entry;
         const added = _c === "UNIT_ADDED";
+        // eslint-disable-next-line no-case-declarations
         const playerObj = {
           player_nr,
           type,
-          character_name,
-          character_id,
+          character_name: char_name.slice(1, -1),
+          character_id: char_id.slice(1, -1),
           player_identifier: String(player_identifier),
           level,
           cp_rank,
