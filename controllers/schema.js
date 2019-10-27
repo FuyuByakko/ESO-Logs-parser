@@ -61,10 +61,10 @@ const mutations = `
   type Mutation {
     AddLog(info: inputLogs): Log
     EditLog(log_nr: String!, info: editLogs): Log
-    RemoveLog(log_nr: String!): Log
+    RemoveLog(log_nr: String!): String
     AddCharacter(info: inputCharacter): Character
     EditCharacter(character_name: String character_id: String info: editCharacter): Character
-    RemoveCharacter(character_name: String character_id: String): Character
+    RemoveCharacter(character_name: String character_id: String): String
   },`;
 
 const schemaString = queries.concat(mutations);
