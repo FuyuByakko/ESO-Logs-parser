@@ -21,7 +21,9 @@ const updateStatus = (change) => {
 updateStatus({ type: "CHANGE_STATUS" });
 */
 
-const showData = (res) => {
+const showData = async (res) => {
   const infoPanel = document.getElementById("infoPanel");
-  infoPanel.innerText = res.data;
+  const info = await res;
+  console.log(info.data);
+  infoPanel.innerText = `${JSON.stringify(info.data)}`;
 };
